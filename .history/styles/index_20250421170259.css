@@ -50,14 +50,6 @@
 
   }
   
-.buttons{
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
- justify-content: space-between;
- gap: 30px;
- font-size: 30px;
-}
 
   
 .search-container {
@@ -121,11 +113,12 @@
 .sign{
   display: flex;
   align-items: center;
- justify-content: space-between;
-  flex-wrap:wrap-reverse;
-  width: 200px;
   
-  right: 50%;
+  flex-wrap:wrap-reverse;
+  
+  padding: 20px;
+  gap: 20;  
+
   
 } 
 

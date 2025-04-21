@@ -50,14 +50,6 @@
 
   }
   
-.buttons{
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
- justify-content: space-between;
- gap: 30px;
- font-size: 30px;
-}
 
   
 .search-container {
@@ -124,6 +116,7 @@
  justify-content: space-between;
   flex-wrap:wrap-reverse;
   width: 200px;
+  padding: 20p
   
   right: 50%;
   

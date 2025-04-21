@@ -51,12 +51,8 @@
   }
   
 .buttons{
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
- justify-content: space-between;
- gap: 30px;
- font-size: 30px;
+  padding-left: 20px;
+  
 }
 
   
