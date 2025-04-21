@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: "kodchasan";
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: auto;
+    font-family: "kodchasan";
+  }
+  /* Nav bar */
+  li{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover{
+  color: red;
+  }
+  
+  header{
+  position: relative;
+  padding: 0 2rem;
+  background-color: black;
+  }
+  
+  .navbar {
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  
+
+.buttons

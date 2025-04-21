@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: "kodchasan";
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: auto;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Nav bar */
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover{
+  color: red;
+  }
+  
+  header{
+  position: relative;
+  padding: 0.2rem;
+  background-color: rgb(31, 30, 30);
+  }
+  
+  .navbar {
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 200px;
+
+  }
+  
+
+  
+.search-container {
+  position: relative;
+  width: 70%;
+  display: flex;
+  
+  align-items: center;
+}
+
+#search-bar {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+ 
+ 
+  padding-right: 30px;
+}
+
+#clear-search {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: none; /* Caché par défaut */
+}
+
+.suggestion-box {
+  position: absolute;
+  width: 100%;
+  background: white;
+
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 35px;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+#clear-search {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: black; /* X en noir */
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+
+.sign{
+  display: flex;
+  align-items: center;
+  width: 100px;
+  padding: 20px;
+  gap: 20Px;
+} 
+
+.secondnav{
+    width: 100%;
+  
+    height: 130px;
+    background-color: rgb(13, 15, 19);
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    
+    
+    
+}
+
+h1 {
+  padding-left: 100%;
+  color: red;
+
+}
+
+.nav{
+  margin-left: 200px;
+}

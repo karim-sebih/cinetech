@@ -1,0 +1,16 @@
+*{
+    font-family: kodchasan;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/body-bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
