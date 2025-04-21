@@ -144,7 +144,7 @@
 
 h1 {
   padding-left: 100%;
-  color: #e5222e  ;
+  color: #e5222e;
 
 }
 
@@ -153,7 +153,6 @@ h1 {
   display: flex;
   gap: 30px;
   margin-left: 50%;
-  
 }
 
 .content{
