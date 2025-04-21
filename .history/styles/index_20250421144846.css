@@ -2,14 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Kanit", sans-serif;
   }
   
   
   a {
     text-decoration: none;
     color: white;
-   
+    font-family: "kodchasan";
   }
   
   body {
@@ -39,13 +38,13 @@
   }
   
   .navbar {
-  width: 70%;
+  width: 100%;
   max-width: 1200px;
   height: 60px;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 200px;
 
   }
   
@@ -173,7 +172,7 @@ h1 {
 
 
 .fs-13{
-  font-size: 13px;
+  font-size: 13;
 }
 
  /*footer*/
