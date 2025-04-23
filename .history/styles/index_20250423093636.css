@@ -200,7 +200,7 @@ h1 {
 .affiche-film-serie-recent .swiper-wrapper,
 .affiche-film-recent .swiper-wrapper,
 .affiche-series-recent .swiper-wrapper {
-  padding-left: 45px; /* Plus de décalage à droite */
+  padding-left: 42px; /* Plus de décalage à droite */
 }
 
 

@@ -188,22 +188,25 @@ h1 {
 
 }
 
+/* styles/index.css */
+
+/* Styles pour les conteneurs Swiper */
 .affiche-film-serie-recent,
 .affiche-film-recent,
 .affiche-series-recent {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 40px; /* Padding pour laisser de l'espace pour les flèches */
+  position: relative;
 }
 
+/* Ajouter un padding à gauche pour décaler les affiches vers la droite */
 .affiche-film-serie-recent .swiper-wrapper,
 .affiche-film-recent .swiper-wrapper,
 .affiche-series-recent .swiper-wrapper {
-  padding-left: 45px; /* Plus de décalage à droite */
+  padding-left: 30px; /* Déplace les affiches 30px vers la droite */
 }
-
-
 
 .swiper-slide {
   display: flex;
@@ -249,6 +252,47 @@ h1 {
   background-color: #0056b3;
 }
 
+/* Styles pour les boutons de navigation */
+.affiche-film-serie-recent .swiper-button-prev,
+.affiche-film-recent .swiper-button-prev,
+.affiche-series-recent .swiper-button-prev,
+.affiche-film-serie-recent .swiper-button-next,
+.affiche-film-recent .swiper-button-next,
+.affiche-series-recent .swiper-button-next {
+  color: #e5222e;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Déplacer la flèche "précédent" plus à gauche */
+.affiche-film-serie-recent .swiper-button-prev,
+.affiche-film-recent .swiper-button-prev,
+.affiche-series-recent .swiper-button-prev {
+  left: -30px; /* Déplace la flèche 30px plus à gauche */
+}
+
+/* Déplacer la flèche "suivant" pour équilibrer */
+.affiche-film-serie-recent .swiper-button-next,
+.affiche-film-recent .swiper-button-next,
+.affiche-series-recent .swiper-button-next {
+  right: -10px; /* Légèrement ajusté pour équilibrer */
+}
+
+/* Effet au survol */
+.affiche-film-serie-recent .swiper-button-prev:hover,
+.affiche-film-recent .swiper-button-prev:hover,
+.affiche-series-recent .swiper-button-prev:hover,
+.affiche-film-serie-recent .swiper-button-next:hover,
+.affiche-film-recent .swiper-button-next:hover,
+.affiche-series-recent .swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 /* Styles pour les boutons de navigation */
 .swiper-button-prev,
 .swiper-button-next {

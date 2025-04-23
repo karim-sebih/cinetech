@@ -188,6 +188,12 @@ h1 {
 
 }
 
+/* styles/index.css */
+
+/* Styles pour les sections de conteneurs */
+/* styles/index.css */
+
+/* Supprimer les styles existants pour les conteneurs (remplacer par Swiper) */
 .affiche-film-serie-recent,
 .affiche-film-recent,
 .affiche-series-recent {
@@ -195,15 +201,8 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
+  m
 }
-
-.affiche-film-serie-recent .swiper-wrapper,
-.affiche-film-recent .swiper-wrapper,
-.affiche-series-recent .swiper-wrapper {
-  padding-left: 45px; /* Plus de décalage à droite */
-}
-
-
 
 .swiper-slide {
   display: flex;
@@ -254,6 +253,17 @@ h1 {
 .swiper-button-next {
   color: #e5222e;
 }
+
+/* Styles pour la pagination */
+.swiper-pagination-bullet {
+  background: #ddd;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e5222e;
+}
+
+
 /* Styles pour les cartes de films et séries */
 .carte-film,
 .carte-serie {
