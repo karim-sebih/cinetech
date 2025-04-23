@@ -49,8 +49,6 @@
   gap: 50px;
 
   }
-
-  
   
 .buttons{
   padding-left: 30px;
@@ -118,7 +116,8 @@
   max-height: 150px;
   overflow-y: auto;
   z-index: 1000;
-  top: 40px;
+  top: 40px; /* Ajusté pour s'assurer qu'il est sous le champ de recherche */
+  border: 1px solid #ddd; /* Ajouté pour mieux voir la boîte */
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -126,7 +125,7 @@
 .suggestion-item {
   padding: 8px;
   cursor: pointer;
-  color: black;
+  color: black; /* Texte en noir pour être visible sur fond blanc */
 }
 
 .suggestion-item:hover {
@@ -137,7 +136,7 @@
   background: none;
   border: none;
   font-size: 20px;
-  color: black; 
+  color: black; /* X en noir */
   cursor: pointer;
   margin-bottom: 12px;
 }
@@ -227,7 +226,6 @@ h1 {
   width: 100%;
   height: auto;
   border-radius: 5px;
-    
 }
 
 .swiper-slide .carte-film h3,
@@ -248,7 +246,7 @@ h1 {
 
 .swiper-slide .carte-film button:hover,
 .swiper-slide .carte-serie button:hover {
-  background-color: #b30000;
+  background-color: #0056b3;
 }
 
 /* Styles pour les boutons de navigation */
@@ -282,7 +280,7 @@ h1 {
 
 .carte-film button,
 .carte-serie button {
-  background-color: #ff0000;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -292,7 +290,7 @@ h1 {
 
 .carte-film button:hover,
 .carte-serie button:hover {
-  background-color: #b30000;
+  background-color: #0056b3;
 }
 
 .type {

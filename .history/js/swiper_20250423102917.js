@@ -24,6 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
           spaceBetween: 5,
         },
       },
+
+      {
+        --swiper-navigation-size: 44px;
+        --swiper-navigation-top-offset: 50%;
+        --swiper-navigation-sides-offset: 10px;
+        --swiper-navigation-color: var(--swiper-theme-color);
+      };
     };
   
     // Initialiser un Swiper pour chaque section

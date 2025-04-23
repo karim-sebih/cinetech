@@ -1,7 +1,4 @@
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Configuration commune pour tous les Swipers
+// js/swiper.js    // Configuration commune pour tous les Swipers
     const swiperConfig = {
       slidesPerView: 4 ,
       spaceBetween: 5,
@@ -30,7 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
     const boxOfficeSwiper = new Swiper('.affiche-film-serie-recent', swiperConfig);
     const moviesSwiper = new Swiper('.affiche-film-recent', swiperConfig);
     const seriesSwiper = new Swiper('.affiche-series-recent', swiperConfig);
-
-
-    
   });

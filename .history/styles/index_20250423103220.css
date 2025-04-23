@@ -227,7 +227,7 @@ h1 {
   width: 100%;
   height: auto;
   border-radius: 5px;
-    
+  align-items: c;
 }
 
 .swiper-slide .carte-film h3,

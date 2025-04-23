@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
           spaceBetween: 5,
         },
       },
+      
     };
   
     // Initialiser un Swiper pour chaque section

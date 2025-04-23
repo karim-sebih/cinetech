@@ -1,14 +1,6 @@
+const API_KEY = 'votre_clé_api'; // Remplacez par votre clé API TMDb (par exemple, 'abc123def456')
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
-const BEARER_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTY1ZGYzMGQwNDAyOGZiODRmYjFmNTdkMDhjMjBiNiIsIm5iZiI6MTc0NTMwNTMwNS4xNDEsInN1YiI6IjY4MDczZWQ5NDIxYTMwOTc1Y2FhZWRlNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lGYh-UNj4NOcQVPv6fheSInh-0FhPL5bzd-aq9rCHB8';
-
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: `Bearer ${BEARER_TOKEN}`
-  }
-};
 
 export const imageBaseUrl = IMAGE_BASE_URL;
 
@@ -19,11 +11,11 @@ export async function fetchConfiguration() {
 
 export async function fetchMovies(page = 1, genreId = null) {
   try {
-    let url = `${BASE_URL}/discover/movie?include_adult=false&include_video=false&language=fr-FR&page=${page}&sort_by=popularity.desc`;
+    let url = `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=fr-FR&page=${page}`;
     if (genreId) {
       url += `&with_genres=${genreId}`;
     }
-    const response = await fetch(url, options);
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
     }
@@ -42,11 +34,11 @@ export async function fetchMovies(page = 1, genreId = null) {
 
 export async function fetchSeries(page = 1, genreId = null) {
   try {
-    let url = `${BASE_URL}/discover/tv?include_adult=false&include_null_first_air_dates=false&language=fr-FR&page=${page}&sort_by=popularity.desc`;
+    let url = `${BASE_URL}/tv/popular?api_key=${API_KEY}&language=fr-FR&page=${page}`;
     if (genreId) {
       url += `&with_genres=${genreId}`;
     }
-    const response = await fetch(url, options);
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
     }
@@ -65,8 +57,8 @@ export async function fetchSeries(page = 1, genreId = null) {
 
 export async function searchMoviesAndSeries(query) {
   try {
-    const url = `${BASE_URL}/search/multi?language=fr-FR&query=${encodeURIComponent(query)}&include_adult=false`;
-    const response = await fetch(url, options);
+    const url = `${BASE_URL}/search/multi?api_key=${API_KEY}&language=fr-FR&query=${encodeURIComponent(query)}`;
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
     }

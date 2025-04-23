@@ -30,7 +30,5 @@ document.addEventListener("DOMContentLoaded", function () {
     const boxOfficeSwiper = new Swiper('.affiche-film-serie-recent', swiperConfig);
     const moviesSwiper = new Swiper('.affiche-film-recent', swiperConfig);
     const seriesSwiper = new Swiper('.affiche-series-recent', swiperConfig);
-
-
     
   });

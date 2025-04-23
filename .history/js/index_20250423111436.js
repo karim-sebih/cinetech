@@ -1,6 +1,6 @@
-import { fetchConfiguration, fetchMovies, fetchSeries } from './api.js';
+import { fetchConfiguration, fetchMovies, fetchSeries, imageBaseUrl } from './api.js';
 
-// Variables globales pour stocker les données
+// Variables globales pour stocker les données JSON
 let movies = [];
 let series = [];
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Charger la configuration
     await fetchConfiguration();
 
-    // Charger les films et séries
+    // Charger les films et séries (pas de pagination avec des fichiers statiques)
     movies = await fetchMovies();
     series = await fetchSeries();
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       limitedItems.forEach(item => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
-        const imageSrc = item.poster_path || "default.jpg"; // Gestion des images manquantes
+        const imageSrc = item.poster_path ? `${imageBaseUrl}w200${item.poster_path}` : "default.jpg";
         slide.innerHTML = `
           <div class="${type === 'movie' ? 'carte-film' : 'carte-serie'}">
             <h3>${item.title || item.name}</h3>

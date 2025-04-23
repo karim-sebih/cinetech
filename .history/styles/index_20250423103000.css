@@ -50,7 +50,7 @@
 
   }
 
-  
+  --swiper-navigation-color: var(--swiper-theme-color);
   
 .buttons{
   padding-left: 30px;
@@ -118,7 +118,8 @@
   max-height: 150px;
   overflow-y: auto;
   z-index: 1000;
-  top: 40px;
+  top: 40px; /* Ajusté pour s'assurer qu'il est sous le champ de recherche */
+  
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -126,7 +127,7 @@
 .suggestion-item {
   padding: 8px;
   cursor: pointer;
-  color: black;
+  color: black; /* Texte en noir pour être visible sur fond blanc */
 }
 
 .suggestion-item:hover {
@@ -137,7 +138,7 @@
   background: none;
   border: none;
   font-size: 20px;
-  color: black; 
+  color: black; /* X en noir */
   cursor: pointer;
   margin-bottom: 12px;
 }
@@ -227,7 +228,6 @@ h1 {
   width: 100%;
   height: auto;
   border-radius: 5px;
-    
 }
 
 .swiper-slide .carte-film h3,

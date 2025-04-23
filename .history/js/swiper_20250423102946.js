@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiperConfig = {
       slidesPerView: 4 ,
       spaceBetween: 5,
+      --swiper-navigation-color: var(--swiper-theme-color);
       loop: true,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
           spaceBetween: 5,
         },
       },
+
+      
     };
   
     // Initialiser un Swiper pour chaque section

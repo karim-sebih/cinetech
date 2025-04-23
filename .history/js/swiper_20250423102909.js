@@ -32,5 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const seriesSwiper = new Swiper('.affiche-series-recent', swiperConfig);
 
 
-    
+     {
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+}
   });
