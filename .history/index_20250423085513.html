@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://kit.fontawesome.com/ca3234fc7d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Cinetech</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="buttons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Rechercher un film ou une série" autocomplete="off">
+                <button id="clear-search">x</button>
+                <div id="suggestions" class="suggestion-box"></div>
+            </div>
+            <div class="sign">
+                <a href="#">Se connecter</a>
+                <a href="#">S'inscrire</a>
+            </div>
+        </nav>
+    </header>
+    <div class="secondnav">
+        <div class="cinetech">
+            <h1>Cinetech</h1>
+        </div>
+        <div class="nav">
+            <a href="/index.html"><h3>Accueil</h3></a>
+            <a href="./pages/film.html"><h3>Film</h3></a>
+            <a href="./pages/series.html"><h3>Séries</h3></a>
+            <a href="./pages/favoris.html"><h3>Favoris</h3></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="swiper-wrapper">
+        <div class="catégorie">À l'affiche
+            <span class="type">Box office</span>
+        </div>
+        <div class="fs-13">Ajout récents</div>
+        <br>
+        <div class="affiche-film-serie-recent"></div>
+and
+        <br>
+        <div class="catégorie">Cinetech
+            <span class="type">Films</span>
+        </div>
+        <div class="fs-13">Ajout récents</div>
+        <br>
+        <div class="affiche-film-recent"></div>
+
+        <br>
+        <div class="catégorie">Cinetech
+            <span class="type">Séries</span>
+        </div>
+        <div class="fs-13">Ajout récents</div>
+        <br>
+        <div class="affiche-series-recent"></div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerNav">
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./pages/film.html">Films</a></li>
+                    <li><a href="./pages/series.html">Séries</a></li>
+                    <li><a href="./pages/favoris.html">Favoris</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright ©2025 ; Conçu par <span class="designer">Karim Sebih, Jorge Santos, Raïs Mahjoub</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/api.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/searchbar.js" type="module"></script>
+</body>
+</html>
