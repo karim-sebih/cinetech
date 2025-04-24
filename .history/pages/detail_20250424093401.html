@@ -37,10 +37,20 @@
             <a href="../index.html"><h3>Accueil</h3></a>
             <a href="./film.html"><h3>Film</h3></a>
             <a href="./series.html"><h3>Séries</h3></a>
-            <a href="./favoris.html"><h3>Favoris</h3></a>
         </div>
     </div>
-    
+    <div class="content">
+        <div id="details-container" class="details-container">
+            <!-- Les détails seront insérés ici par JavaScript -->
+        </div>
+        <div id="similar-container" class="similar-container">
+            <h2>Suggestions similaires</h2>
+            <div id="similar-items" class="similar-items">
+                <!-- Les suggestions seront insérées ici par JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footerContainer">
             <div class="footerNav">
@@ -48,7 +58,6 @@
                     <li><a href="../index.html">Accueil</a></li>
                     <li><a href="./film.html">Films</a></li>
                     <li><a href="./series.html">Séries</a></li>
-                    <li><a href="./pages/favoris.html">Favoris</a></li>
                 </ul>
             </div>
             <div class="footerBottom">
@@ -56,5 +65,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/api.js" type="module"></script>
+    <script src="../js/searchbar.js" type="module"></script>
+    <script src="../js/detail.js" type="module"></script>
 </body>
 </html>

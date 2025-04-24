@@ -20,7 +20,6 @@
     background-color: rgb(39, 40, 44);
     color: white;
   }
-  
   /* Nav bar */
 
   a{
@@ -49,8 +48,6 @@
   gap: 50px;
 
   }
-
-  
   
 .buttons{
   padding-left: 30px;
@@ -110,38 +107,14 @@
   background: #f0f0f0;
 }
 
-/* Ajout dans styles/index.css */
-.suggestion-box {
-  position: absolute;
-  width: 100%;
-  background: white;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 1000;
-  top: 40px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.suggestion-item {
-  padding: 8px;
-  cursor: pointer;
-  color: black;
-}
-
-.suggestion-item:hover {
-  background: #f0f0f0;
-}
-
 #clear-search {
   background: none;
   border: none;
   font-size: 20px;
-  color: black; 
+  color: black; /* X en noir */
   cursor: pointer;
   margin-bottom: 12px;
 }
-
 
 
 .sign{
@@ -178,10 +151,9 @@ h1 {
   
   display: flex;
   gap: 30px;
-  margin-left: 40%;
+  margin-left: 50%;
   
 }
-
 
 /* Ajouter ces styles à la fin de detail.css */
 
@@ -276,87 +248,6 @@ h1 {
   }
 }
 
-
-.similar-container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.similar-container h2 {
-  font-size: 1.8em;
-  color: #e5222e;
-  margin-bottom: 20px;
-}
-
-.similar-items {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
-
-
-.similar-item {
-  flex: 0 0 auto;
-  width: 200px;
-  text-align: center;
-}
-
-.similar-poster {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.similar-item h3 {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-.similar-item .details-btn {
-  background-color: #e5222e;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9em;
-  transition: background-color 0.3s ease;
-}
-
-.similar-item .details-btn:hover {
-  background-color: #c41d27;
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-  .similar-items {
-    gap: 15px;
-  }
-
-  .similar-item {
-    width: 150px;
-  }
-
-  .similar-item h3 {
-    font-size: 0.9em;
-  }
-
-  .similar-item .details-btn {
-    padding: 6px 12px;
-    font-size: 0.8em;
-  }
-}
 footer {
     padding: 0;
     margin: 0;

@@ -20,7 +20,6 @@
     background-color: rgb(39, 40, 44);
     color: white;
   }
-  
   /* Nav bar */
 
   a{
@@ -49,8 +48,6 @@
   gap: 50px;
 
   }
-
-  
   
 .buttons{
   padding-left: 30px;
@@ -110,38 +107,14 @@
   background: #f0f0f0;
 }
 
-/* Ajout dans styles/index.css */
-.suggestion-box {
-  position: absolute;
-  width: 100%;
-  background: white;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 1000;
-  top: 40px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.suggestion-item {
-  padding: 8px;
-  cursor: pointer;
-  color: black;
-}
-
-.suggestion-item:hover {
-  background: #f0f0f0;
-}
-
 #clear-search {
   background: none;
   border: none;
   font-size: 20px;
-  color: black; 
+  color: black; /* X en noir */
   cursor: pointer;
   margin-bottom: 12px;
 }
-
 
 
 .sign{
@@ -178,10 +151,9 @@ h1 {
   
   display: flex;
   gap: 30px;
-  margin-left: 40%;
+  margin-left: 50%;
   
 }
-
 
 /* Ajouter ces styles à la fin de detail.css */
 
@@ -276,7 +248,9 @@ h1 {
   }
 }
 
+/* Ajouter ces styles à la fin de detail.css */
 
+/* Conteneur des suggestions similaires */
 .similar-container {
   max-width: 1200px;
   margin: 40px auto;
@@ -292,6 +266,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Conteneur des éléments similaires */
 .similar-items {
   display: flex;
   gap: 20px;
