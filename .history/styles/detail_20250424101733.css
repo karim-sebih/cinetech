@@ -358,47 +358,7 @@ h1 {
   }
 }
 
-.star {
-  font-size: 20px;
-  /* Adjust the size of the stars */
-  color: #ffd700;
-  /* Gold color for full stars */
-  margin-right: 2px;
-  /* Add spacing between stars */
-}
 
-.empty-star {
-  color: #ccc;
-  /* Gray color for empty stars */
-}
-
-.half-star {
-  position: relative;
-  display: inline-block;
-  font-size: 20px; /* Adjust the size of the stars */
-  color: #ffd700; /* Gold color for the filled part */
-}
-
-.half-star::before {
-  content: '\2605'; /* Unicode for the full star */
-  color: #ffd700; /* Gold color for the filled part */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2; /* Ensure the filled part is on top */
-  width: 50%; /* Only show the left half of the filled star */
-  overflow: hidden;
-}
-
-.half-star::after {
-  content: '\2605'; /* Unicode for the empty star */
-  color: #333; /* Gray color for the empty part */
-  -webkit-text-stroke: 0.3px #ffd700; /* Add a gold outline to the star */ 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Ensure the empty part is below the filled part */
-}
 
 
 

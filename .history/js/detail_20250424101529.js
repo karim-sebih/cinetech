@@ -81,24 +81,8 @@ function displayDetails(data, type) {
       </div>
     </div>
   `;
-function generateStars(rating) {
-    const maxStars = 5; // Maximum number of stars
-    const stars = (rating / 10) * maxStars; // Convert rating (out of 10) to stars (out of 5)
-    let starHtml = '';
 
-    for (let i = 1; i <= maxStars; i++) {
-        if (i <= Math.floor(stars)) {
-            starHtml += '<span class="star full-star">&#9733;</span>'; // Full star
-        } else if (i - stars < 1) {
-            starHtml += '<span class="star half-star">&#9733;</span>'; // Half star
-        } else {
-            starHtml += '<span class="star empty-star">&#9734;</span>'; // Empty star
-        }
-    }
-    return starHtml;
-}
-
-
+  
   // Ajouter un événement pour le bouton "Ajouter aux favoris"
   const favoriteBtn = document.getElementById('add-to-favorites');
   favoriteBtn.addEventListener('click', () => {
