@@ -72,7 +72,8 @@ header {
   border: none;
   font-size: 16px;
   cursor: pointer;
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
 }
 
 .suggestion-box {
@@ -279,12 +280,13 @@ footer {
 
 /* Film Section */
 
-.title-films h1{
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center; /* Ensure text is centered */
-font-size: 2.5em;
+.title-films h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Ensure text is centered */
+  font-size: 2.5em;
 }
 
 .movie-grid {
@@ -311,9 +313,11 @@ font-size: 2.5em;
 }
 
 .movie-card img {
-  background-color: #222; /* Placeholder background */
+  background-color: #222;
+  /* Placeholder background */
   display: block;
 }
+
 .movie-card h3 {
   padding: 10px;
   font-size: 18px;
@@ -366,30 +370,39 @@ font-size: 2.5em;
 }
 
 .modal-content {
-  display: flex; /* Use flexbox to align items side by side */
-  flex-direction: row; /* Horizontal alignment */
-  align-items: flex-start; /* Align items to the top */
-  justify-content: space-between; /* Add space between the image and details */
+  display: flex;
+  /* Use flexbox to align items side by side */
+  flex-direction: row;
+  /* Horizontal alignment */
+  align-items: flex-start;
+  /* Align items to the top */
+  justify-content: space-between;
+  /* Add space between the image and details */
   padding: 20px;
   background-color: #333;
   border-radius: 10px;
-  max-width: 800px; /* Increase width for better layout */
+  max-width: 800px;
+  /* Increase width for better layout */
   width: 90%;
   color: white;
 }
 
 .modal-content img {
-  width: 35%; /* Image takes 40% of the modal width */
+  width: 35%;
+  /* Image takes 40% of the modal width */
   height: auto;
   border-radius: 10px;
-  margin-right: 20px; /* Add spacing between the image and details */
+  margin-right: 20px;
+  /* Add spacing between the image and details */
 }
 
 .modal-content .movie-details {
-  width: 75%; /* Details take 55% of the modal width */
+  width: 75%;
+  /* Details take 55% of the modal width */
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Add spacing between detail items */
+  gap: 10px;
+  /* Add spacing between detail items */
 }
 
 .modal-content h2 {
@@ -430,9 +443,12 @@ font-size: 2.5em;
 
 /* ======================================================= */
 .button {
-  position: absolute; /* Position the button relative to the modal content */
-  top: 30px; /* Adjust the position */
-  right: 30px; /* Adjust the position */
+  position: absolute;
+  /* Position the button relative to the modal content */
+  top: 30px;
+  /* Adjust the position */
+  right: 30px;
+  /* Adjust the position */
   width: 3em;
   height: 3em;
   border: none;
@@ -492,7 +508,7 @@ font-size: 2.5em;
   background-color: rgb(130, 0, 0);
 }
 
-.button:hover > .close {
+.button:hover>.close {
   animation: close 0.2s forwards 0.25s;
 }
 
@@ -542,11 +558,53 @@ font-size: 2.5em;
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 
+.star {
+  font-size: 20px;
+  /* Adjust the size of the stars */
+  color: #ffd700;
+  /* Gold color for full stars */
+  margin-right: 2px;
+  /* Add spacing between stars */
+}
+
+.empty-star {
+  color: #ccc;
+  /* Gray color for empty stars */
+}
+
+.half-star {
+  position: relative;
+  display: inline-block;
+  font-size: 20px; /* Adjust the size of the stars */
+  color: #ffd700; /* Gold color for the filled part */
+}
+
+.half-star::before {
+  content: '\2605'; /* Unicode for the full star */
+  color: #ffd700; /* Gold color for the filled part */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensure the filled part is on top */
+  width: 50%; /* Only show the left half of the filled star */
+  overflow: hidden;
+}
+
+.half-star::after {
+  content: '\2605'; /* Unicode for the empty star */
+  color: #333; /* Gray color for the empty part */
+  -webkit-text-stroke: 0.3px #ffd700; /* Add a gold outline to the star */ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the empty part is below the filled part */
+}
