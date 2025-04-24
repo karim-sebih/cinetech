@@ -81,7 +81,7 @@ function displayDetails(data, type) {
       </div>
     </div>
   `;
-function generateStars(rating) {
+  function generateStars(rating) {
     const maxStars = 5; // Maximum number of stars
     const stars = (rating / 10) * maxStars; // Convert rating (out of 10) to stars (out of 5)
     let starHtml = '';

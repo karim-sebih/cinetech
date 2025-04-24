@@ -36,9 +36,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Afficher les détails
     displayDetails(data, type);
-
-    // Récupérer et afficher les suggestions similaires
-    await fetchAndDisplaySimilar(id, type);
   } catch (error) {
     console.error('Erreur lors de la récupération des détails :', error);
     displayError('Impossible de charger les détails. Veuillez réessayer plus tard.');
@@ -70,97 +67,21 @@ function displayDetails(data, type) {
       <div class="details-text">
         <h2>${title}</h2>
         <p class="overview">${data.overview || 'Synopsis non disponible.'}</p>
-        <p><strong>Rating:</strong> ${generateStars(data.vote_average)}</p>
+        <p><strong>Note :</strong> ${data.vote_average?.toFixed(1) || 'N/A'} / 10</p>
         <p><strong>Genre :</strong> ${genres}</p>
         <p><strong>${directorLabel} :</strong> ${director}</p>
         <p><strong>Date de sortie :</strong> ${releaseDate || 'N/A'}</p>
         <p><strong>Langue :</strong> ${data.original_language?.toUpperCase() || 'N/A'}</p>
         <p><strong>Pays :</strong> ${countries}</p>
-        <button id="add-to-favorites" class Rosé (2019) on-premise only - 750ml
         <button id="add-to-favorites" class="favorite-btn">Ajouter aux favoris</button>
       </div>
     </div>
   `;
-function generateStars(rating) {
-    const maxStars = 5; // Maximum number of stars
-    const stars = (rating / 10) * maxStars; // Convert rating (out of 10) to stars (out of 5)
-    let starHtml = '';
-
-    for (let i = 1; i <= maxStars; i++) {
-        if (i <= Math.floor(stars)) {
-            starHtml += '<span class="star full-star">&#9733;</span>'; // Full star
-        } else if (i - stars < 1) {
-            starHtml += '<span class="star half-star">&#9733;</span>'; // Half star
-        } else {
-            starHtml += '<span class="star empty-star">&#9734;</span>'; // Empty star
-        }
-    }
-    return starHtml;
-}
-
 
   // Ajouter un événement pour le bouton "Ajouter aux favoris"
   const favoriteBtn = document.getElementById('add-to-favorites');
   favoriteBtn.addEventListener('click', () => {
     addToFavorites({ id: data.id, title, type, poster_path: data.poster_path });
-  });
-}
-
-async function fetchAndDisplaySimilar(id, type) {
-  try {
-    // Déterminer l'endpoint pour les suggestions similaires
-    const similarEndpoint = type === 'movie'
-      ? `https://api.themoviedb.org/3/movie/${id}/similar?language=fr-FR&page=1`
-      : `https://api.themoviedb.org/3/tv/${id}/similar?language=fr-FR&page=1`;
-
-    // Récupérer les suggestions similaires
-    const response = await fetch(similarEndpoint, options);
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
-    }
-    const similarData = await response.json();
-    const similarItems = similarData.results.slice(0, 5); // Limiter à 5 suggestions
-
-    // Afficher les suggestions
-    displaySimilarItems(similarItems, type);
-  } catch (error) {
-    console.error('Erreur lors de la récupération des suggestions similaires :', error);
-    const similarContainer = document.getElementById('similar-items');
-    if (similarContainer) {
-      similarContainer.innerHTML = `<p class="error-message">Impossible de charger les suggestions similaires.</p>`;
-    }
-  }
-}
-
-function displaySimilarItems(items, type) {
-  const container = document.getElementById('similar-items');
-  if (!container) {
-    console.error('Conteneur de suggestions similaires introuvable.');
-    return;
-  }
-
-  container.innerHTML = ''; // Vider le conteneur
-
-  items.forEach(item => {
-    const itemElement = document.createElement('div');
-    itemElement.className = 'similar-item';
-    const imageSrc = item.poster_path ? `${imageBaseUrl}w200${item.poster_path}` : 'default.jpg';
-    const title = type === 'movie' ? item.title : item.name;
-    itemElement.innerHTML = `
-      <img src="${imageSrc}" alt="${title}" class="similar-poster">
-      <h3>${title}</h3>
-      <button class="details-btn" data-id="${item.id}" data-type="${type}">Voir Détails</button>
-    `;
-    container.appendChild(itemElement);
-  });
-
-  // Ajouter des écouteurs d'événements pour les boutons "Voir Détails"
-  container.querySelectorAll('.details-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const id = button.dataset.id;
-      const newType = button.dataset.type;
-      window.location.href = `./detail.html?id=${id}&type=${newType}`;
-    });
   });
 }
 
