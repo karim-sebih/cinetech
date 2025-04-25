@@ -1,98 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Kanit", sans-serif;
-  }
-  
-  
-  a {
-    text-decoration: none;
-    color: white;
-   
-  }
-  
-  body {
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: auto;
-    background-color: rgb(28, 29, 32);
-    color: white;
-  }
-  
-  /* Nav bar */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
 
-  a{
-    text-decoration: none;
-    color: white;
-  }
-  
-  a:hover{
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
   color: red;
-  }
-  
-  header{
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: auto;
+  background-color: rgb(28, 29, 32);
+  color: white;
+}
+
+/* Nav bar */
+header {
   position: relative;
   padding: 0.2rem;
   background-color: rgb(31, 30, 30);
-  }
-  
-  .navbar {
+}
+
+.navbar {
   margin-left: 10px;
   width: 100%;
   max-width: 1200px;
   height: 60px;
-  margin: 0;
   display: flex;
   align-items: center;
   gap: 50px;
+}
 
-  }
-  
-.buttons{
+.buttons {
   padding-left: 30px;
   display: flex;
   align-items: center;
- justify-content: space-between;
- gap: 30px;
- font-size: 30px;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 30px;
 }
 
-  
 .search-container {
   position: relative;
   width: 70%;
   display: flex;
-  
   align-items: center;
+
 }
 
 #search-bar {
   width: 100%;
   height: 100%;
   padding: 8px;
- 
- 
   padding-right: 30px;
 }
 
 #clear-search {
   position: absolute;
-  top:5px;
+  top: 5px;
   right: 30px;
   background: transparent;
   border: none;
   font-size: 16px;
   cursor: pointer;
-  display: none; /* Caché par défaut */
+  display: none;
+  /* Hidden by default */
 }
 
 .suggestion-box {
   position: absolute;
   width: 100%;
   background: white;
-
   max-height: 150px;
   overflow-y: auto;
   z-index: 1000;
@@ -108,166 +95,444 @@
   background: #f0f0f0;
 }
 
-#clear-search {
-  background: none;
-  border: none;
-  font-size: 20px;
-  color: black; /* X en noir */
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-
-
-.sign{
+.sign {
   display: flex;
   align-items: center;
- justify-content: space-between;
-  flex-wrap:wrap-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
   width: 200px;
-  
-  right: 50%;
-  
-} 
-
- /*second nav*/
-
-.secondnav{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    gap: 200px;
-    border: 10px;
-    
-    
 }
 
-h1 {
-  padding-left: 100%;
-  color: #e5222e  ;
-
+/* Second nav */
+.secondnav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 200px;
 }
 
-.nav{
-  
+.cinetech h1 {
+  padding-left: 30%;
+  color: #e5222e;
+}
+
+.nav {
   display: flex;
   gap: 30px;
   margin-left: 50%;
-  
+}
+
+/* Footer */
+footer {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #111;
+}
+
+.footerContainer {
+  width: 100%;
+  padding-top: 1px;
+  background-color: #212529;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 9px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+}
+
+.socialIcons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: #000;
+  padding: 25px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/* ==================== Film Section =======================*/
+
+
+
+/* TV Section */
+
+.title-tv h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Ensure text is centered */
+  font-size: 2.5em;
+}
+
+.tvSeries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.tvSeries-card {
+  background-color: #444;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  display: flex;           /* Add this */
+    flex-direction: column;  /* Add this */
+    height: 400px;     
+}
+
+.tvSeries-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.tvSeries-card img {
+  background-color: #222;
+  /* Placeholder background */
+  display: block;
+}
+
+
+.tvSeries-card .series-rating {
+  padding-bottom: 10px;   /* Add this */
+  margin-top: auto;       /* Add this */
+}
+
+.tvSeries-card h3 {
+  padding: 10px;
+  font-size: 15px;
+font-weight: normal;
+  flex-grow: 1;  /* Add this */
+}
+
+.tvSeries-card h3 {
+  transform: scale(1.05);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.tvSeries-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #777;
+}
+
+.pagination button.active {
+  background-color: #e5222e;
+  color: white;
+}
+
+
+/* modal */
+/* Modal styles */
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  /* Use flexbox to align items side by side */
+  flex-direction: row;
+  /* Horizontal alignment */
+  align-items: flex-start;
+  /* Align items to the top */
+  justify-content: space-between;
+  /* Add space between the image and details */
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  max-width: 800px;
+  /* Increase width for better layout */
+  width: 90%;
+  color: white;
+}
+
+.modal-content img {
+  width: 35%;
+  /* Image takes 40% of the modal width */
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+  /* Add spacing between the image and details */
+}
+
+.modal-content .movie-details {
+  width: 75%;
+  /* Details take 55% of the modal width */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Add spacing between detail items */
+}
+
+.modal-content h2 {
+  color: #e5222e;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #ccc;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Adjust for smaller screens */
+/* .modal-content {
+  max-width: 90%; 
+  width: 100%;
+}  */
+
+/* .modal-close {
+  position: absolute;
+  top: 15px; 
+  right: 25px; 
+  background-color: transparent; 
+  color: white; 
+  border: none; 
+  font-size: 20px; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+
+.modal-close:hover {
+  color: #e5222e; 
+} */
+
+
+
+/* ======================================================= */
+.button {
+  position: absolute;
+  /* Position the button relative to the modal content */
+  top: 30px;
+  /* Adjust the position */
+  right: 30px;
+  /* Adjust the position */
+  width: 3em;
+  height: 3em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* .close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+} */
+
+.button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.button:hover>.close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
 }
 
 
 
-footer {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  footer {
-    background-color: #111;
-  }
-  
-  .footerContainer {
-    width: 100%;
-  padding-top: 1px;
-    background-color: #212529;
-  }
-  
-  .socialIcons {
-    display: flex;
-    justify-content: center;
-  
-  }
-  
-  .socialIcons a {
-    text-decoration: none;
-    padding: 9px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-  }
-  
-  .socialIcons a i {
-    font-size: 2em;
-    color: black;
-    opacity: 0, 9;
-  }
-  
-  /* Hover affect on social media icon */
-  .socialIcons a:hover {
-    background-color: #111;
-    transition: 0.5s;
-  }
-  
-  .socialIcons a:hover i {
-    color: white;
-    transition: 0.5s;
-  }
-  
-  .footerNav {
-    margin: 30px 0;
-  }
-  
-  .footerNav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-  }
-  
-  .footerNav ul li a {
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-  
-  }
-  
-  .footerNav ul li a:hover {
-    opacity: 1;
-  }
-  
-  .footerBottom {
-    background-color: #000;
-    padding: 25px;
-    text-align: center;
-  }
-  
-  .footerBottom p {
-    color: white;
-  }
-  
-  
-  .designer {
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-  }
-  
-  @media (max-width:990px) {
-    .footerNav ul {
-      flex-direction: column;
-    }
-    .footerNav ul li {
-      width: 100%;
-      text-align: center;
-      margin:10px;
-    }
-  
-  
-    @media (max-width:599px) {
-      .footerNav ul {
-        flex-direction: column;
-      }
-      .footerNav ul li {
-        width: 100%;
-        text-align: center;
-        margin:10px;
-      }
-    }
-  }
-  
+
+
+
+
+
+
+
+
+
+/* =============================================================== */
+
+/* .modal-close {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-close:hover {
+  background-color: #e5222e;
+} */
+
+
+.star {
+  font-size: 20px;
+  /* Adjust the size of the stars */
+  color: #ffd700;
+  /* Gold color for full stars */
+  margin-right: 2px;
+  /* Add spacing between stars */
+}
+
+.empty-star {
+  color: #ccc;
+  /* Gray color for empty stars */
+}
+
+.half-star {
+  position: relative;
+  display: inline-block;
+  font-size: 20px; /* Adjust the size of the stars */
+  color: #ffd700; /* Gold color for the filled part */
+}
+
+.half-star::before {
+  content: '\2605'; /* Unicode for the full star */
+  color: #ffd700; /* Gold color for the filled part */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensure the filled part is on top */
+  width: 50%; /* Only show the left half of the filled star */
+  overflow: hidden;
+}
+
+.half-star::after {
+  content: '\2605'; /* Unicode for the empty star */
+  color: #333; /* Gray color for the empty part */
+  -webkit-text-stroke: 0.3px #ffd700; /* Add a gold outline to the star */ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the empty part is below the filled part */
+}
