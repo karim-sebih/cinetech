@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: white;
+   
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: auto;
+    background-color: rgb(39, 40, 44);
+    color: white;
+  }
+  
+  /* Nav bar */
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover{
+  color: red;
+  }
+  
+  header{
+  position: relative;
+  padding: 0.2rem;
+  background-color: rgb(31, 30, 30);
+  }
+  
+  .navbar {
+  margin-left: 10px;
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  }
+
+  
+  
+.buttons{
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ gap: 30px;
+ font-size: 30px;
+}
+
+  
+.search-container {
+  position: relative;
+  width: 70%;
+  display: flex;
+  
+  align-items: center;
+}
+
+#search-bar {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+ 
+ 
+  padding-right: 30px;
+}
+
+#clear-search {
+  position: absolute;
+  top:5px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: none; /* Caché par défaut */
+}
+
+.suggestion-box {
+  position: absolute;
+  width: 100%;
+  background: white;
+
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 35px;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+/* Ajout dans styles/index.css */
+.suggestion-box {
+  position: absolute;
+  width: 100%;
+  background: white;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+  color: black;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+#clear-search {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: black; 
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+
+
+.sign{
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+  flex-wrap:wrap-reverse;
+  width: 200px;
+  
+  right: 50%;
+  
+} 
+
+ /*second nav*/
+
+.secondnav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    border: 10px;
+    
+    
+}
+
+h1 {
+  padding-left: 100%;
+  color: #e5222e  ;
+
+}
+
+.nav{
+  
+  display: flex;
+  gap: 30px;
+  margin-left: 40%;
+  
+}
+
+
+/* Ajouter ces styles à la fin de detail.css */
+
+/* Conteneur principal des détails */
+.details-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenu des détails (image + texte) */
+.details-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Affiche */
+.details-poster {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Texte des détails */
+.details-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.details-text h2 {
+  font-size: 2.2em;
+  color: #e5222e;
+}
+
+.details-text .overview {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.details-text p {
+  font-size: 1em;
+}
+
+.details-text strong {
+  color: #e5222e;
+}
+
+/* Bouton Ajouter aux favoris */
+.favorite-btn {
+  background-color: #e5222e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.favorite-btn:hover {
+  background-color: #c41d27;
+}
+
+/* Message d'erreur */
+.error-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #ff5555;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .details-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-poster {
+    width: 200px;
+  }
+
+  .details-text h2 {
+    font-size: 1.8em;
+  }
+}
+
+
+.similar-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.similar-container h2 {
+  font-size: 1.8em;
+  color: #e5222e;
+  margin-bottom: 20px;
+}
+
+.similar-items {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+
+.similar-item {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.similar-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.similar-item h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.similar-item .details-btn {
+  background-color: #e5222e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.similar-item .details-btn:hover {
+  background-color: #c41d27;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .similar-items {
+    gap: 15px;
+  }
+
+  .similar-item {
+    width: 150px;
+  }
+
+  .similar-item h3 {
+    font-size: 0.9em;
+  }
+
+  .similar-item .details-btn {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+}
+
+.star {
+  font-size: 20px;
+  /* Adjust the size of the stars */
+  color: #ffd700;
+  /* Gold color for full stars */
+  margin-right: 2px;
+  /* Add spacing between stars */
+}
+
+.empty-star {
+  color: #ccc;
+  /* Gray color for empty stars */
+}
+
+.half-star {
+  position: relative;
+  display: inline-block;
+  font-size: 20px; /* Adjust the size of the stars */
+  color: #ffd700; /* Gold color for the filled part */
+}
+
+.half-star::before {
+  content: '\2605'; /* Unicode for the full star */
+  color: #ffd700; /* Gold color for the filled part */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensure the filled part is on top */
+  width: 50%; /* Only show the left half of the filled star */
+  overflow: hidden;
+}
+
+.half-star::after {
+  content: '\2605'; /* Unicode for the empty star */
+  color: #333; /* Gray color for the empty part */
+  -webkit-text-stroke: 0.3px #ffd700; /* Add a gold outline to the star */ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the empty part is below the filled part */
+}
+
+/* trailer */
+
+
+
+/* Commentaire */
+
+
+/* Conteneur des commentaires */
+.commentaire {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.commentaire h2 {
+  font-size: 1.8em;
+  color: #e5222e;
+  margin-bottom: 20px;
+}
+
+/* Liste des avis */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Élément individuel d'avis */
+.review-item {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-header h3 {
+  font-size: 1.2em;
+  color: #e5222e;
+}
+
+.review-rating {
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+.review-date {
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+.review-content {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Message pour aucun avis */
+.no-reviews {
+  font-size: 1em;
+  color: #bbb;
+  text-align: center;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .commentaire {
+    padding: 15px;
+  }
+
+  .commentaire h2 {
+    font-size: 1.5em;
+  }
+
+  .review-header h3 {
+    font-size: 1em;
+  }
+
+  .review-rating,
+  .review-date {
+    font-size: 0.8em;
+  }
+
+  .review-content {
+    font-size: 0.9em;
+  }
+}
+
+
+
+
+
+
+footer {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  footer {
+    background-color: #111;
+  }
+  
+  .footerContainer {
+    width: 100%;
+  padding-top: 1px;
+    background-color: #212529;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .socialIcons a {
+    text-decoration: none;
+    padding: 9px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  
+  .socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0, 9;
+  }
+  
+  /* Hover affect on social media icon */
+  .socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+  }
+  
+  .socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .footerNav {
+    margin: 30px 0;
+  }
+  
+  .footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  
+  .footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  
+  }
+  
+  .footerNav ul li a:hover {
+    opacity: 1;
+  }
+  
+  .footerBottom {
+    background-color: #000;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .footerBottom p {
+    color: white;
+  }
+  
+  
+  .designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+  }
+  
+  @media (max-width:990px) {
+    .footerNav ul {
+      flex-direction: column;
+    }
+    .footerNav ul li {
+      width: 100%;
+      text-align: center;
+      margin:10px;
+    }
+  
+  
+    @media (max-width:599px) {
+      .footerNav ul {
+        flex-direction: column;
+      }
+      .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin:10px;
+      }
+    }
+  }
+  
