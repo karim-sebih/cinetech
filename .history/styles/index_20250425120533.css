@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: white;
+   
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: auto;
+    background-color: rgb(39, 40, 44);
+    color: white;
+  }
+  
+  /* Nav bar */
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover{
+  color: red;
+  }
+  
+  header{
+  position: relative;
+  padding: 0.2rem;
+  background-color: rgb(31, 30, 30);
+  }
+  
+  .navbar {
+  margin-left: 10px;
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  }
+
+  
+  
+.buttons{
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ gap: 30px;
+ font-size: 30px;
+}
+
+  
+.search-container {
+  position: relative;
+  width: 70%;
+  display: flex;
+  
+  align-items: center;
+}
+
+#search-bar {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+ 
+ 
+  padding-right: 30px;
+}
+
+#clear-search {
+  position: absolute;
+  top:5px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: none; /* Caché par défaut */
+}
+
+.suggestion-box {
+  position: absolute;
+  width: 100%;
+  background: white;
+
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 35px;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+/* Ajout dans styles/index.css */
+.suggestion-box {
+  position: absolute;
+  width: 100%;
+  background: white;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+  color: black;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+#clear-search {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: black; 
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+
+
+.sign{
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+  flex-wrap:wrap-reverse;
+  width: 200px;
+  
+  right: 50%;
+  
+} 
+
+ /*second nav*/
+
+.secondnav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    border: 10px;
+    
+    
+}
+
+h1 {
+  padding-left: 100%;
+  color: #e5222e  ;
+
+}
+
+.nav{
+  
+  display: flex;
+  gap: 30px;
+  margin-left: 40%;
+  
+}
+
+.content{
+  margin-top: 10Px;
+  padding-left: 50px;
+  margin-bottom: 100px;
+
+}
+
+.affiche-film-serie-recent,
+.affiche-film-recent,
+.affiche-series-recent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display :flex;
+  justify-content: space-between;
+}
+
+.affiche-film-serie-recent .swiper-wrapper,
+.affiche-film-recent .swiper-wrapper,
+.affiche-series-recent .swiper-wrapper {
+  padding-left: 45px; /* Plus de décalage à droite */
+}
+
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles pour les cartes dans les Swipers */
+.swiper-slide .carte-film,
+.swiper-slide .carte-serie {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide .carte-film img,
+.swiper-slide .carte-serie img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  p
+    
+}
+
+.swiper-slide .carte-film h3,
+.swiper-slide .carte-serie h3 {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.swiper-slide .carte-film button,
+.swiper-slide .carte-serie button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.swiper-slide .carte-film button:hover,
+.swiper-slide .carte-serie button:hover {
+  background-color: #b30000;
+}
+
+/* Styles pour les boutons de navigation */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #e5222e;
+}
+/* Styles pour les cartes de films et séries */
+.carte-film,
+.carte-serie {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carte-film img,
+.carte-serie img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.carte-film h3,
+.carte-serie h3 {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.carte-film button,
+.carte-serie button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carte-film button:hover,
+.carte-serie button:hover {
+  background-color: #b30000;
+}
+
+.type {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 4px;
+  background-color: #e5222e;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 19px;
+}
+
+.catégorie{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 
+  40px;
+}
+
+
+
+
+
+.fs-13{
+  font-size: 13px;
+}
+
+ /*footer*/
+
+
+
+
+
+footer {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #111;
+}
+
+.footerContainer {
+  width: 100%;
+padding-top: 1px;
+  background-color: #212529;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 9px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0, 9;
+}
+
+/* Hover affect on social media icon */
+.socialIcons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: #000;
+  padding: 25px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+@media (max-width:990px) {
+  .footerNav ul {
+    flex-direction: column;
+  }
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin:10px;
+  }
+
+
+  @media (max-width:599px) {
+    .footerNav ul {
+      flex-direction: column;
+    }
+    .footerNav ul li {
+      width: 100%;
+      text-align: center;
+      margin:10px;
+    }
+  }
+}
