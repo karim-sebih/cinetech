@@ -400,41 +400,7 @@ h1 {
   z-index: 1; /* Ensure the empty part is below the filled part */
 }
 
-/* trailer */
-.trailer-section {
-  margin-top: 20px;
-  text-align: center;
-}
 
-.trailer-section h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.trailer-section .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.trailer-section .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-}
-
-.no-trailer {
-  color: #888;
-  font-style: italic;
-  text-align: center;
-  margin-top: 20px;
-}
 
 
 /* Commentaire */

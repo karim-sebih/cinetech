@@ -22,37 +22,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    // Déterminer l'endpoint pour les détails
-    const detailsEndpoint = type === 'movie' 
+    // Déterminer l'endpoint en fonction du type (film ou série)
+    const endpoint = type === 'movie' 
       ? `https://api.themoviedb.org/3/movie/${id}?append_to_response=credits&language=fr-FR`
       : `https://api.themoviedb.org/3/tv/${id}?append_to_response=credits&language=fr-FR`;
 
     // Récupérer les détails
-    const detailsResponse = await fetch(detailsEndpoint, options);
-    if (!detailsResponse.ok) {
-      throw new Error(`Erreur HTTP ! Statut : ${detailsResponse.status}`);
+    const response = await fetch(endpoint, options);
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
     }
-    const data = await detailsResponse.json();
+    const data = await response.json();
 
-    // Récupérer les vidéos (trailers)
-    const videosEndpoint = type === 'movie'
-      ? `https://api.themoviedb.org/3/movie/${id}/videos?language=fr-FR`
-      : `https://api.themoviedb.org/3/tv/${id}/videos?language=fr-FR`;
-    let trailerKey = null;
-    try {
-      const videosResponse = await fetch(videosEndpoint, options);
-      if (!videosResponse.ok) {
-        throw new Error(`Erreur HTTP ! Statut : ${videosResponse.status}`);
-      }
-      const videosData = await videosResponse.json();
-      const trailer = videosData.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
-      trailerKey = trailer ? trailer.key : null;
-    } catch (error) {
-      console.error('Erreur lors de la récupération des vidéos :', error);
-    }
-
-    // Afficher les détails (y compris le trailer)
-    displayDetails(data, type, trailerKey);
+    // Afficher les détails
+    displayDetails(data, type);
 
     // Récupérer et afficher les avis
     await fetchAndDisplayReviews(id, type);
@@ -65,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-function displayDetails(data, type, trailerKey) {
+function displayDetails(data, type) {
   const container = document.getElementById('details-container');
   if (!container) {
     console.error('Conteneur de détails introuvable.');
@@ -84,21 +67,6 @@ function displayDetails(data, type, trailerKey) {
   const imageSrc = data.poster_path ? `${imageBaseUrl}w500${data.poster_path}` : 'default.jpg';
 
   // Construire le HTML pour les détails
-  let trailerHtml = '';
-  if (trailerKey) {
-    trailerHtml = `
-      <div class="trailer-section">
-        <h3>Bande-annonce</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailerKey}" 
-                title="Bande-annonce de ${title}" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-      </div>
-    `;
-  } else {
-    trailerHtml = `<p class="no-trailer">Bande-annonce non disponible.</p>`;
-  }
-
   container.innerHTML = `
     <div class="details-content">
       <img src="${imageSrc}" alt="${title}" class="details-poster">
@@ -114,7 +82,6 @@ function displayDetails(data, type, trailerKey) {
         <button id="add-to-favorites" class="favorite-btn">Ajouter aux favoris</button>
       </div>
     </div>
-    ${trailerHtml}
   `;
 
   // Ajouter un événement pour le bouton "Ajouter aux favoris"
@@ -171,17 +138,21 @@ function displayReviews(reviews) {
     const content = review.content || 'Aucun commentaire.';
     const rating = review.author_details?.rating ? `${review.author_details.rating}/10` : 'Non noté';
     const createdAt = review.created_at ? new Date(review.created_at).toLocaleDateString('fr-FR') : 'Date inconnue';
-    
+    const trailer = detail.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
     reviewElement.innerHTML = `
       <div class="review-header">
         <h3>${author}</h3>
         <p class="review-rating">Note : ${rating}</p>
         <p class="review-date">Publié le : ${createdAt}</p>
       </div>
+      <
       <p class="review-content">${content}</p>
     `;
     container.appendChild(reviewElement);
   });
+  $(trailer ?
+    <div class = ></div>
+  )
 }
 
 async function fetchAndDisplaySimilar(id, type) {
