@@ -58,3 +58,12 @@ function removeLikedRecipe(recipeName) {
   localStorage.setItem('Favoris', JSON.stringify(favoris));
   updateFavoris();
 }
+
+// Navigation vers les détails
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("details-btn")) {
+    const id = event.target.dataset.id;
+    const type = event.target.dataset.type;
+    window.location.href = `./pages/detail.html?id=${id}&type=${type}`;
+  }
+});
